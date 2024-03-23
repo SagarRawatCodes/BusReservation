@@ -1,0 +1,67 @@
+{% extends 'navbar.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #bt2{
+            width: 200px;
+            background-color: #4caf50;
+
+        }
+        #bt1{
+            width: 100px;
+            background-color: #4caf50;
+
+        }
+    </style>
+    
+</head>
+<body>
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10 sol-xs-12">
+            <div class="card rounded-0">
+                <div class="card-header">
+                    <div class="card-title h3 mb-0">Find Bus</div>
+                </div>
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <form action="" method="post" id="find-form">
+                            {%csrf_token%}
+                        <div class="mb-3">
+                            <label for="source" class="control-labell">From</label>
+                            <input name="source" class="form-control rounded-0" type="text" id="source"  value="{% if data.source %}{{data.source}}{%endif%}" required>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="destination" class="control-labell">To</label>
+                            <input name="destination" class="form-control rounded-0" type="text" id="destination"  value="{% if data.destination %}{{data.destination}}{%endif%}" required>
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="control-labell">Date</label>
+                            <input name="date" class="form-control rounded-0" type="date" id="date"  value="{% if data.date %}{{data.date}}{%endif%}" required>
+                            
+                        </div>
+                        {% if error %}
+                        <div class="alert alert-danger">
+                            {{error}}    
+                        </div>
+                        {%endif%}
+                        </form>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button id="bt2" class="btn btn-sm rounded-0 w-100 color:#4caf50;" form="find-form">Find</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    {% endblock %}
+    </body>
+    </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;;
+            background-color: white;
+        
+        }
+        button{
+            background-color: blue;
+            width:25%;
+            padding:15px;
+            color:black;
+            border:none;
+            float:center;
+            font-size:15px;
+        }
+        lable{
+            font-size:20px;
+        }
+        form{
+            border:2px solid #f1f1f1;
+
+        }
+        input[type=email],input[type=password]{
+            width:50%;
+            font-size:15px;
+            margin:8px 0px;
+            padding:12px 20px;
+            display:inline-block;
+            border:2px solid lightsteelblue;
+            box-sizing: border-box;
+        }
+        input[type=radio]{
+            height:18px;
+            width:18px;
+
+        }
+        button:hover{
+            opacity:0.7;
+
+        }
+        .container{
+            padding:50px;
+            background-color: white;
+        }
+        .imgContainer{
+            text-align:center;
+            margin:24px 0 12px 0;
+        }
+        img.avatar{
+            width:10%;
+            border-radius: 50%;
+        }
+        img.bus1{
+            align-items: left;
+            position: absolute;
+            margin-top: -450px;
+            margin-left: 20px;
+            
+        }
+        img.bus2{
+            align-items: right;
+            justify-content: flex-end;
+            position: absolute;
+            margin-top: -450px;
+            margin-left: 1200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Login Page</h1></center>
+    <form action="#" method="post">
+        {% csrf_token %}
+        {% load static %}
+        <center><div class="container">
+            <div class="imagContainer">
+
+            <img src="{% static 'avatar1.jpeg'%}" alt="Avatar" class="avatar"><br>
+            <lable for="email"><b>Email Id:</b></lable>
+            <input type="email" placeholder="Enter email" name="email" flaot="right"required><br>
+            <lable for="password"><b>Password:</b></lable>
+            <input type="password" placeholder="Enter password" name="password" required><br>
+            <button type="submit"><b>Login</b></button><br>
+            Don't have account  ?<a href="/signup"> register </a>
+            </div>
+        </div></center>
+    </form>
+    <img src="{% static 'bus1.jpeg'%}" alt="bus1" class="bus1">
+    <img src="{% static 'bus2.jpeg'%}" alt="bus2" class="bus2">
+</body>
+</html>

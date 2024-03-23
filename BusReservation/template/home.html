@@ -1,0 +1,36 @@
+{% extends 'navbar.html' %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        
+    
+        body{
+            color:green;
+            background-color:white;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        .mainbus{
+            width:100%;
+            height:60%;
+        }
+    </style>
+</head>
+<body
+     {% load static%}  
+    
+    <center><h1>Welcome to the Bus Reservation Project</h1>
+        <h2>Start your journey now</h2>
+    <img src="{% static 'main.jpeg'%}" alt="bus1" class="mainbus"></center>
+    
+</body>
+</html>
+{% endblock %}

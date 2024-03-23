@@ -1,0 +1,48 @@
+{% extends 'navbar.html' %} {% block content %}
+    <div class="container py-5">
+        <div class="alert alert-sucess rounded-0 my-3">
+            <h3 class="mb-0">Your Order has been Confirmed!</h3>
+
+        </div>
+        <div class="text-center">
+            <form action="" method="post">
+            <button type="button" class="btn btn-info rounded-0 col-lg-4 col-md-5 col-sm-6 col-xs=6" data-bs-toggle="modal" data-bs-target="#myModal">
+             Information
+            </button>
+            <button type="submit" class="btn btn-primary rounded-0 col-lg-4 col-md-5 col-sm-6 col-xs-6">OK</button>
+            </form>
+        </div>
+        </div>
+        <div class="fade modal" id="myModal">
+            <div class="modal-dialog rounded-0 modal-dialog-centered">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Orders Information</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <h1>Print myname</h1>
+                    </div>
+                    <!----Modal Body-->
+                    <h1>Print myname</h1>
+                    <div class="Modal-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><b>Bus name:</b>______</li>
+                            <li class="list-group-item"><b>Starting point:</b>_________</li>
+                            <li class="list-group-item"><b>Destination point:</b></li>
+                            <li class="list-group-item"><b>Number of seats:</b>________</li>
+                            <li class="list-group-item"><b>Price:</b>_______</li>
+                            <li class="list-group-item"><b>Cost:</b>________</li>
+                            <li class="list-group-item"><b>Date</b>:</b>________</li>
+                            <li class="list-group-item"><b>Time</b>:</b>________</li>
+                        </ul>
+                    </div>
+                    <!--Modal footer--> 
+                    <div class="modal-footer py-1">
+                        <button type="button" class="btn btn-default bg-secondary bg-gradient btn-sm rounded-0 text-light" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    a{
+        padding:35px;
+        
+    }
+    nav{
+        background-color:#4caf50;
+    }
+</style>
+    <title>Bus Reservation System by TechSAGA</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navar-light ">
+    <div class="container">
+        <a class="navbar-brand" href="#" style="color:white;">Bus Reservation</a>
+        <button id="bt1" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavalMarkup" aria-expanded="false" aria-lable="Toggle navigation">
+    <span class="navbar-toggler-icons"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <a class="nav-item nav-link" href="" style="color:white;">Home</a>
+        <a class="nav-item nav-link" href="" style="color:white;">Find Bus</a>
+        <a class="nav-item nav-link" href="" style="color:white;">Orders</a>
+        <a class="nav-item nav-link" href="" style="color:white;">Feedback</a>
+        {% if request.user.is_active %}
+        <a class="nav-item nav-link" href="" style="color:white;">Logout</a>
+        {% else %}
+        <a class="nav-item nav-link" href="" style="color:white;">Registration</a>
+        {% endif %}
+        </div>
+    </div>
+    </div>
+
+</nav>
+{% block content %} 
+{% endblock %}
+
+
+    
+</body>
+</html>

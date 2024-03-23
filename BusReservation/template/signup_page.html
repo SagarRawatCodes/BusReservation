@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Paget</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;;
+            background-color: white;
+        
+        }
+        button{
+            background-color: blue;
+            width:25%;
+            padding:15px;
+            color:black;
+            border:none;
+            float:center;
+            font-size:15px;
+        }
+        lable{
+            font-size:20px;
+        }
+        form{
+            border:2px solid #f1f1f1;
+
+        }
+        input[type=email],input[type=text],input[type=password]{
+            width:50%;
+            font-size:15px;
+            margin:8px 0px;
+            padding:12px 20px;
+            display:inline-block;
+            border:2px solid lightsteelblue;
+            box-sizing: border-box;
+        }
+        input[type=radio]{
+            height:18px;
+            width:18px;
+
+        }
+        button:hover{
+            opacity:0.7;
+
+        }
+        .container{
+            padding:50px;
+            background-color: white;
+        }
+        .imgContainer{
+            text-align:center;
+            margin:24px 0 12px 0;
+        }
+        img.avatar{
+            width:10%;
+            border-radius: 50%;
+
+
+        }
+        img.bus1{
+            align-items: left;
+            position: absolute;
+            margin-top: -560px;
+            margin-left: 20px;
+            
+        }
+        img.bus2{
+            align-items: right;
+            justify-content: flex-end;
+            margin-top: -560px;
+            position: absolute;
+            margin-left: 1200px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Registration Page</h1></center>
+    <form action="#" method="post">
+        {% csrf_token %}
+        {% load static %}
+    <center><div class="container"
+        <div class="imageContainer">
+            <img src="{% static 'avatar2.jpeg'%}" alt="Avatar" class="avatar">
+            </div>
+            
+            <lable for="first_name"><b>First Name:</b></lable>
+            <input type="text" placeholder="Enter First name" name="first_name" required><br>
+            <lable for="Last_name"><b>Last Name:</b></lable>
+            <input type="text" placeholder="Enter Last name" name="Last_name" required><br>
+            <lable for="sex"><b>Sex:</b></lable>
+            <input type="radio" name="sex" value="male" required>
+            <lable><b>Male</b></lable>
+            <input type="radio" name="sex"  value="female"required>
+            <lable><b>female</b></lable><br>
+            <lable for="email"><b>Email Id:</b></lable>
+            <input type="email" placeholder="Enter email" name="email" float="right"required><br>
+            <lable for="password"><b>Password:</b></lable>
+            <input type="password" placeholder="Enter password" name="password" required><br>
+            <button type="submit"><b>Signup</b></button><br>
+            Already an account ?<a href="/login"> Login </a>
+
+        </div></center>
+    </form>
+    <img src="{% static 'bus1.jpeg'%}" alt="bus1" class="bus1">
+    <img src="{% static 'bus2.jpeg'%}" alt="bus2" class="bus2">
+    
+</body>
+</html>
